@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 import { getCurrentProduct } from '@shopgate/pwa-common-commerce/product/selectors/product';
 /**
- * Returns dummies
+ * Params for share button
  * @return {Array}
  */
 export const getShareParams = createSelector([getCurrentProduct], (currentProduct) => {
@@ -9,7 +9,7 @@ export const getShareParams = createSelector([getCurrentProduct], (currentProduc
     const shareParams = {
       title: currentProduct.name,
       imageUrl: currentProduct.featuredImageUrl,
-      deepLink: currentProduct.additionalProperties.productUrl,
+      deepLink: currentProduct.productUrl,
     };
     return shareParams;
   }
