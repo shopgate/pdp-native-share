@@ -11,23 +11,19 @@ import connect from '../../connector';
 class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
+    shareParams: PropTypes.shape().isRequired,
     iOSTheme: PropTypes.bool,
-    shareParams: PropTypes.shape(),
   };
 
   static defaultProps = {
     iOSTheme: true,
-    shareParams: null,
   };
   /**
    * Handles the share button click
    * Show's share screen for app
    * @param {Object} event The click event object
    */
-  handleClick = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-
+  handleClick = () => {
     this.props.shareItem();
   }
   /**

@@ -9,6 +9,7 @@ const androidButtons = css({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
+  zIndex: 1,
 }).toString();
 
 const iOSButtons = css({
@@ -18,6 +19,7 @@ const iOSButtons = css({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
+  zIndex: 1,
 }).toString();
 
 const buttonProto = {

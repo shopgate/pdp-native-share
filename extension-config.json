@@ -4,29 +4,12 @@
   "components": [
     {
       "id": "ShareButton",
-      "path": "frontend/portals/ShareButtonAndroid",
-      "target": "product.ctas.before",
-      "type": "portals"
-    },
-    {
-      "id": "ShareButton",
-      "path": "frontend/portals/ShareButtoniOS",
+      "path": "frontend/portals/ShareButton",
       "target": "product.ctas.before",
       "type": "portals"
     }
   ],
   "steps": [
-    {
-      "path": "extension/addProductUrlToAddProps.js",
-      "description": "Add product url to additionalProperties",
-      "hooks": ["shopgate.catalog.getProducts.v1:afterFetchProducts"],
-      "input": [
-        {"key": "products"}
-      ],
-      "output": [
-        {"key": "products"}
-      ]
-    }
   ],
   "configuration": {
   }
