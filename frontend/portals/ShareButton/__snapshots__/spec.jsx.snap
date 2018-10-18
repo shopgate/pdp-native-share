@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShareButton should render ShareButton 1`] = `
+<Component
+  iOSTheme={false}
+>
+  <Component
+    iOSTheme={[Function]}
+  >
+    <div>
+      ShareButton
+    </div>
+  </Component>
+</Component>
+`;

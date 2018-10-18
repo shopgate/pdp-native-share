@@ -4,19 +4,23 @@ import MaterialShareIcon from '@shopgate/pwa-ui-material/icons/MaterialShareIcon
 import Ripple from '@shopgate/pwa-ui-shared/Ripple';
 import PropTypes from 'prop-types';
 import styles from './style';
+import getConfig from '../../helpers/getConfig';
 import connect from '../../connector';
+
+const { androidShareSVG } = getConfig();
+const { iOSShareSVG } = getConfig();
 /**
  * ShareButton component
  */
 class ShareButton extends Component {
   static propTypes = {
+    iOSTheme: PropTypes.func.isRequired,
     shareItem: PropTypes.func.isRequired,
-    shareParams: PropTypes.shape().isRequired,
-    iOSTheme: PropTypes.bool,
+    shareParams: PropTypes.shape(),
   };
 
   static defaultProps = {
-    iOSTheme: true,
+    shareParams: null,
   };
   /**
    * Handles the share button click
@@ -31,11 +35,10 @@ class ShareButton extends Component {
    * @returns {JSX}
    */
   renderIcon() {
-    if (this.props.iOSTheme) {
-      return <ShareIcon />;
+    if (this.props.iOSTheme()) {
+      return <ShareIcon svg={iOSShareSVG} />;
     }
-
-    return <MaterialShareIcon />;
+    return <MaterialShareIcon svg={androidShareSVG} />;
   }
   /**
    * Renders the components
@@ -45,8 +48,8 @@ class ShareButton extends Component {
     if (!this.props.shareParams) {
       return null;
     }
-    const buttons = this.props.iOSTheme ? styles.iOSButtons : styles.androidButtons;
-    const className = this.props.iOSTheme ? styles.buttonFlat : styles.button;
+    const buttons = this.props.iOSTheme() ? styles.iOSButtons : styles.androidButtons;
+    const className = this.props.iOSTheme() ? styles.buttonFlat : styles.button;
     return (
       <div className={`${buttons}`}>
         <button

@@ -8,7 +8,7 @@ export const getShareParams = createSelector([getCurrentProduct], (currentProduc
   if (currentProduct) {
     const shareParams = {
       title: currentProduct.name,
-      imageUrl: currentProduct.featuredImageUrl,
+      imageURL: currentProduct.featuredImageUrl,
       deepLink: currentProduct.productUrl,
     };
     return shareParams;
