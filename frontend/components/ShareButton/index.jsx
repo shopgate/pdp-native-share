@@ -3,16 +3,17 @@ import ShareIcon from '@shopgate/pwa-ui-shared/icons/ShareIcon';
 import Ripple from '@shopgate/pwa-ui-shared/Ripple';
 import PropTypes from 'prop-types';
 import styles from './style';
+import isiOSTheme from '../../helpers/isiOSTheme';
 import getConfig from '../../helpers/getConfig';
 import connect from '../../connector';
 
 const { gmdIcon, iOSIcon } = getConfig();
+const iOSTheme = isiOSTheme();
 /**
  * ShareButton component
  */
 class ShareButton extends Component {
   static propTypes = {
-    iOSTheme: PropTypes.func.isRequired,
     shareItem: PropTypes.func.isRequired,
     onRippleComplete: PropTypes.func,
     shareParams: PropTypes.shape(),
@@ -37,8 +38,8 @@ class ShareButton extends Component {
    * Renders the share icon depending on theme
    * @returns {JSX}
    */
-  renderIcon() {
-    if (this.props.iOSTheme()) {
+  renderIcon = () => {
+    if (iOSTheme) {
       return <ShareIcon icon={iOSIcon} />;
     }
     return <ShareIcon icon={gmdIcon} />;
@@ -51,9 +52,9 @@ class ShareButton extends Component {
     if (!this.props.shareParams || this.props.shareParams.deepLink === undefined) {
       return null;
     }
-    const buttonLocaation = this.props.iOSTheme() ? styles.iOSButtons : styles.androidButtons;
+    const buttonLocaation = iOSTheme ? styles.iOSButtons : styles.androidButtons;
     let iconStyle = styles.buttoniOSThemeiOSIcon;
-    if (this.props.iOSTheme()) {
+    if (iOSTheme) {
       iconStyle = iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
     } else {
       iconStyle = gmdIcon === 'gmd' ? styles.buttonMaterialThemeMaterialIcon : styles.buttonMaterialThemeiOSIcon;

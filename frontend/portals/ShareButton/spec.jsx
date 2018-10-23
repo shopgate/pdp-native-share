@@ -6,7 +6,7 @@ jest.mock('../../components/ShareButton', () => () => <div>ShareButton</div>);
 
 describe('ShareButton', () => {
   it('should render ShareButton', () => {
-    const component = mount(<ShareButton iOSTheme={false} />);
+    const component = mount(<ShareButton />);
     expect(component).toMatchSnapshot();
   });
 });

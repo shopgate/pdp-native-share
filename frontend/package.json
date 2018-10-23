@@ -9,7 +9,6 @@
     "test:watch": "npm run test -- --watch",
     "coverage": "jest --coverage",
     "coverage:watch": "npm run coverage -- --watch",
-    "check": "nsp check",
     "dummy": ""
   },
   "devDependencies": {
@@ -29,7 +28,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.17.0",
-    "nsp": "^3.1.0",
     "prop-types": "^15.6.0",
     "react": "~16.3.2",
     "react-dom": "~16.3.2",
