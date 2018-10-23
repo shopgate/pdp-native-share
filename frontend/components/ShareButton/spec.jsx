@@ -27,11 +27,11 @@ jest.mock('../../selector', () => ({
 }));
 
 /**
- * Mocked fucntion for shareItem
+ * Mocked function for shareItem
  * @param {Object} mockedShareParams mocked parameters
  */
 const mockedShareItem = () => {
-  console.log(mockedShareParams);
+  jest.fn();
 };
 
 jest.mock('@shopgate/pwa-core/commands/shareItem', () => ({
