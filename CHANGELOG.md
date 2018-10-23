@@ -1,21 +1,9 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+### 1.0.1
+#### Added
+- Changed file layout, changed conifgurtions allowed, and applied  to iOS icon
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
-
-## [Unreleased]
-### Added
-### Changed
-### Fixed
-### Removed
-
-## [1.0.0] - YYYY-MM-DD
-### Added
-### Changed
-### Fixed
-### Removed
-
-
-[Unreleased]: https://github.com/shopgate/ext-cliplister/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/shopgate/ext-cliplister/compare/v0.0.1...v1.0.0
+### 1.0.0
+#### Added
+- Added Share Button to products details page that will launch an app commands for the Native Share feature

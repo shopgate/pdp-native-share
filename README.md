@@ -1,5 +1,8 @@
 # Shopgate Connect - Native Share extension
 
+This extensiion will create a button for the native share app command on product detail pages for iOS and Android devices. 
+This extension will also add a Configuration field to the Connect merchant admin to determine which svg icon to use. 'ios' or 'gmd'
+
 ## About Shopgate
 
 Shopgate is the leading mobile commerce platform.

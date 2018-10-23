@@ -3,7 +3,7 @@ import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
 const androidButtons = css({
   position: 'absolute',
-  right: 130,
+  right: 300,
   padding: 8,
   top: -30,
   display: 'flex',
@@ -32,11 +32,24 @@ const buttonProto = {
   lineHeight: 1,
   color: themeConfig.colors.accent,
   outline: 0,
+  stroke: themeConfig.colors.accent,
+  strokeWidth: 1,
 };
 
-const buttonFlat = css(buttonProto).toString();
+const buttoniOSThemeiOSIcon = css(buttonProto).toString();
 
-const button = css({
+const buttoniOSThemeMaterialIcon = css({
+  ...buttonProto,
+  strokeWidth: 0.25,
+}).toString();
+
+const buttonMaterialThemeMaterialIcon = css({
+  ...buttonProto,
+  strokeWidth: 0.25,
+  boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
+}).toString();
+
+const buttonMaterialThemeiOSIcon = css({
   ...buttonProto,
   boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
 }).toString();
@@ -48,8 +61,10 @@ const ripple = css({
 export default {
   androidButtons,
   iOSButtons,
-  buttonFlat,
-  button,
+  buttoniOSThemeiOSIcon,
+  buttoniOSThemeMaterialIcon,
+  buttonMaterialThemeMaterialIcon,
+  buttonMaterialThemeiOSIcon,
   ripple,
 };
 
