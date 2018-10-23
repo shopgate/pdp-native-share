@@ -15,7 +15,7 @@
     "iOSIcon": {
       "type": "admin",
       "destination": "frontend",
-      "default": "gmd",
+      "default": "ios",
       "params": {
         "required": true,
         "type": "text",
