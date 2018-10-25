@@ -13,4 +13,4 @@ First version of the extension.
 ### Added
 Inital Commit.
 
-[1.0.0]: https://github.com/shopgate/ext-pdp-native-share/compare/master...CCP-897-0.1
+[1.0.0]: https://github.com/shopgate/ext-pdp-native-share/compare/v0.0.1...1.0.0
