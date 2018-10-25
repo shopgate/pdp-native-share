@@ -17,6 +17,8 @@
     "@shopgate/pwa-common-commerce": "*",
     "@shopgate/pwa-core": "*",
     "@shopgate/pwa-unit-test": "*",
+    "@shopgate/pwa-ui-ios": "*",
+    "@shopgate/pwa-ui-material": "*",
     "babel-core": "^6.26.3",
     "babel-plugin-dynamic-import-webpack": "^1.0.2",
     "babel-plugin-lodash": "^3.3.2",
@@ -44,5 +46,12 @@
     "react-redux": "^5.0.5",
     "redux-mock-store": "^1.5.3",
     "reselect": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@shopgate/pwa-common": "5.9.0-beta.10",
+    "@shopgate/pwa-common-commerce": "5.9.0-beta.10",
+    "@shopgate/pwa-core": "5.9.0-beta.10",
+    "@shopgate/pwa-ui-ios": "5.9.0-beta.10",
+    "@shopgate/pwa-ui-material": "5.9.0-beta.10"
   }
 }
