@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import ShareIcon from '@shopgate/pwa-ui-shared/icons/ShareIcon';
+import ShareIconiOS from '@shopgate/pwa-ui-ios/icons/ShareIcon';
+import ShareIconGmd from '@shopgate/pwa-ui-material/icons/ShareIcon';
 import Ripple from '@shopgate/pwa-ui-shared/Ripple';
 import PropTypes from 'prop-types';
 import styles from './style';
@@ -39,10 +40,13 @@ class ShareButton extends Component {
    * @returns {JSX}
    */
   renderIcon = () => {
+    let icon = <ShareIconiOS />;
     if (iOSTheme) {
-      return <ShareIcon icon={iOSIcon} />;
+      icon = iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
+      return icon;
     }
-    return <ShareIcon icon={gmdIcon} />;
+    icon = gmdIcon === 'gmd' ? <ShareIconGmd /> : <ShareIconiOS />;
+    return icon;
   }
   /**
    * Renders the components

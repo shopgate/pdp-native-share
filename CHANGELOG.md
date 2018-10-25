@@ -1,9 +1,14 @@
 # Changelog
+ All notable changes to this project will be documented in this file.
+ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### 1.0.1
-#### Added
-- Changed file layout, changed conifgurtions allowed, and applied  to iOS icon
+First version of the extension.
+### Added
+- Added Share Button to products details page that will launch an app command for Native Share feature for iOS and Android
+- You can configure which svg image is shown for each theme via the Connect admin. There is a string input location for iOS icon style and Google Material Design icon style.
+- Use string 'ios' for iOS share icon and 'gmd' for Google Material design icon. 
 
-### 1.0.0
-#### Added
-- Added Share Button to products details page that will launch an app commands for the Native Share feature
+## [0.01] - 2018-10-11
+### Added
+Inital Commit.

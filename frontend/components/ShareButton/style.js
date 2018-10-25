@@ -3,7 +3,7 @@ import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
 const androidButtons = css({
   position: 'absolute',
-  right: 300,
+  left: 8,
   padding: 8,
   top: -30,
   display: 'flex',
