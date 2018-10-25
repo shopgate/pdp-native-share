@@ -24,6 +24,29 @@ class ShareButton extends Component {
     onRippleComplete: () => {},
     shareParams: null,
   };
+  /**
+   * Gets the icon style.
+   * @returns {string}
+   */
+  static getIconStyle() {
+    if (iOSTheme) {
+      return iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
+    }
+    return gmdIcon === 'gmd' ? styles.buttonMaterialThemeMaterialIcon : styles.buttonMaterialThemeiOSIcon;
+  }
+
+  /**
+   * Renders the share icon depending on theme
+   * @returns {JSX}
+   */
+  static renderIcon = () => {
+    if (iOSTheme) {
+      return iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
+    }
+
+    return gmdIcon === 'gmd' ? <ShareIconGmd /> : <ShareIconiOS />;
+  }
+
   onRippleComplete = () => {
     this.props.onRippleComplete(this.handleClick());
   }
@@ -35,19 +58,7 @@ class ShareButton extends Component {
   handleClick = () => {
     this.props.shareItem();
   }
-  /**
-   * Renders the share icon depending on theme
-   * @returns {JSX}
-   */
-  renderIcon = () => {
-    let icon = <ShareIconiOS />;
-    if (iOSTheme) {
-      icon = iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
-      return icon;
-    }
-    icon = gmdIcon === 'gmd' ? <ShareIconGmd /> : <ShareIconiOS />;
-    return icon;
-  }
+
   /**
    * Renders the components
    * @returns {JSX}
@@ -56,21 +67,15 @@ class ShareButton extends Component {
     if (!this.props.shareParams || this.props.shareParams.deepLink === undefined) {
       return null;
     }
-    const buttonLocaation = iOSTheme ? styles.iOSButtons : styles.androidButtons;
-    let iconStyle = styles.buttoniOSThemeiOSIcon;
-    if (iOSTheme) {
-      iconStyle = iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
-    } else {
-      iconStyle = gmdIcon === 'gmd' ? styles.buttonMaterialThemeMaterialIcon : styles.buttonMaterialThemeiOSIcon;
-    }
+
     return (
-      <div className={`${buttonLocaation}`}>
+      <div className={iOSTheme ? styles.iOSButtons : styles.androidButtons}>
         <button
-          className={`${iconStyle}`}
+          className={this.constructor.getIconStyle()}
           data-test-id="shareIcon"
         >
           <Ripple className={`${styles.ripple}`} onComplete={this.onRippleComplete}>
-            {this.renderIcon()}
+            {this.constructor.renderIcon()}
           </Ripple>
         </button>
       </div>
