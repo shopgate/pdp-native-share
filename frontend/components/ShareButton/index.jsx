@@ -68,6 +68,7 @@ class ShareButton extends Component {
         <button
           className={this.constructor.getIconStyle()}
           data-test-id="shareIcon"
+          type="button"
         >
           <Ripple className={`${styles.ripple}`} onComplete={this.handleClick}>
             {this.constructor.renderIcon()}
