@@ -19,7 +19,6 @@ const iOSButtons = css({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  zIndex: 1,
 }).toString();
 
 const buttonProto = {
@@ -34,6 +33,7 @@ const buttonProto = {
   outline: 0,
   stroke: themeConfig.colors.accent,
   strokeWidth: 1,
+  zIndex: 1,
 };
 
 const buttoniOSThemeiOSIcon = css(buttonProto).toString();
