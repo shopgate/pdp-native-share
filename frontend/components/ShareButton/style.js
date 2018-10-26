@@ -31,8 +31,6 @@ const buttonProto = {
   lineHeight: 1,
   color: themeConfig.colors.accent,
   outline: 0,
-  stroke: themeConfig.colors.accent,
-  strokeWidth: 1,
   zIndex: 1,
 };
 
@@ -55,7 +53,8 @@ const buttonMaterialThemeiOSIcon = css({
 }).toString();
 
 const ripple = css({
-  padding: 10,
+  padding: 8,
+  fontSize: 24,
 }).toString();
 
 export default {
