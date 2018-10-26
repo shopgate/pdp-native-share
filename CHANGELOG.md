@@ -2,7 +2,7 @@
  All notable changes to this project will be documented in this file.
  The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-### 1.0.1
+### 1.0.0
 First version of the extension.
 ### Added
 - Added Share Button to products details page that will launch an app command for Native Share feature for iOS and Android
@@ -12,3 +12,5 @@ First version of the extension.
 ## [0.01] - 2018-10-11
 ### Added
 Inital Commit.
+
+[1.0.0]: https://github.com/shopgate/ext-pdp-native-share/compare/v0.0.1...1.0.0
