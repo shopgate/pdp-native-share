@@ -1,6 +1,6 @@
 {
   "name": "@shopgate/pdp-native-share",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "license": "Apache-2.0",
   "scripts": {
@@ -48,10 +48,10 @@
     "reselect": "^3.0.1"
   },
   "peerDependencies": {
-    "@shopgate/pwa-common": "5.9.0-beta.10",
-    "@shopgate/pwa-common-commerce": "5.9.0-beta.10",
-    "@shopgate/pwa-core": "5.9.0-beta.10",
-    "@shopgate/pwa-ui-ios": "5.9.0-beta.10",
-    "@shopgate/pwa-ui-material": "5.9.0-beta.10"
+    "@shopgate/pwa-common": "5.10.0-alpha.1",
+    "@shopgate/pwa-common-commerce": "5.10.0-alpha.1",
+    "@shopgate/pwa-core": "5.10.0-alpha.1",
+    "@shopgate/pwa-ui-ios": "5.10.0-alpha.1",
+    "@shopgate/pwa-ui-material": "5.10.0-alpha.1"
   }
 }

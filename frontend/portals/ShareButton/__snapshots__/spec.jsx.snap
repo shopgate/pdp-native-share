@@ -2,10 +2,10 @@
 
 exports[`ShareButton should render ShareButton 1`] = `
 <_default>
-  <Component>
+  <MockedShareButton>
     <div>
       ShareButton
     </div>
-  </Component>
+  </MockedShareButton>
 </_default>
 `;
