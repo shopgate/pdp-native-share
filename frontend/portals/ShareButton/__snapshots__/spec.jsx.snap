@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ShareButton should render ShareButton 1`] = `
-<Component>
+<_default>
   <Component>
     <div>
       ShareButton
     </div>
   </Component>
-</Component>
+</_default>
 `;
