@@ -16,12 +16,10 @@ const iOSTheme = isiOSTheme();
 class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
-    onRippleComplete: PropTypes.func,
     shareParams: PropTypes.shape(),
   };
 
   static defaultProps = {
-    onRippleComplete: () => {},
     shareParams: null,
   };
   /**
@@ -47,9 +45,6 @@ class ShareButton extends Component {
     return gmdIcon === 'gmd' ? <ShareIconGmd /> : <ShareIconiOS />;
   }
 
-  onRippleComplete = () => {
-    this.props.onRippleComplete(this.handleClick());
-  }
   /**
    * Handles the share button click
    * Show's share screen for app
@@ -73,8 +68,9 @@ class ShareButton extends Component {
         <button
           className={this.constructor.getIconStyle()}
           data-test-id="shareIcon"
+          type="button"
         >
-          <Ripple className={`${styles.ripple}`} onComplete={this.onRippleComplete}>
+          <Ripple className={`${styles.ripple}`} onComplete={this.handleClick}>
             {this.constructor.renderIcon()}
           </Ripple>
         </button>

@@ -19,7 +19,6 @@ const iOSButtons = css({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  zIndex: 1,
 }).toString();
 
 const buttonProto = {
@@ -32,8 +31,7 @@ const buttonProto = {
   lineHeight: 1,
   color: themeConfig.colors.accent,
   outline: 0,
-  stroke: themeConfig.colors.accent,
-  strokeWidth: 1,
+  zIndex: 1,
 };
 
 const buttoniOSThemeiOSIcon = css(buttonProto).toString();
@@ -55,7 +53,8 @@ const buttonMaterialThemeiOSIcon = css({
 }).toString();
 
 const ripple = css({
-  padding: 10,
+  padding: 8,
+  fontSize: 24,
 }).toString();
 
 export default {
