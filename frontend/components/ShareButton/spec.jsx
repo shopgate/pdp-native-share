@@ -2,7 +2,6 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
-import ShareButton from './index';
 
 const mockedConfig = {
   gmdIcon: 'gmd',
@@ -36,6 +35,8 @@ jest.mock('@shopgate/pwa-core/commands/shareItem', () => ({
 }));
 
 describe('ShareButton', () => {
+  // eslint-disable-next-line global-require
+  const ShareButton = require('./index').default;
   // eslint-disable-next-line require-jsdoc
   const makeComponent = () => mount((
     <Provider store={configureStore()({})}>
