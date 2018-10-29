@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import shareItem from '@shopgate/pwa-core/commands/shareItem';
-import { getShareParams } from './selector';
+import { getShareParams } from './selectors';
 
 /**
  * Maps state to props

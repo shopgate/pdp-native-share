@@ -4,7 +4,7 @@ import { getCurrentProduct } from '@shopgate/pwa-common-commerce/product/selecto
  * Params for share button
  * @return {Array}
  */
-export const getShareParams = createSelector([getCurrentProduct], (currentProduct) => {
+export const getShareParams = createSelector(getCurrentProduct, (currentProduct) => {
   if (currentProduct) {
     const shareParams = {
       title: currentProduct.name,

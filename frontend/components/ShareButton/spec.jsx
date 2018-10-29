@@ -9,7 +9,7 @@ const mockedConfig = {
 };
 
 jest.mock('../../helpers/getConfig', () => () => mockedConfig);
-
+jest.mock('../../helpers/isiOSTheme', () => () => true);
 const mockedParams = {
   mockedShareParams: {
     title: 'title',
@@ -18,7 +18,7 @@ const mockedParams = {
   },
 };
 
-jest.mock('../../selector', () => ({
+jest.mock('../../selectors/index', () => ({
   getShareParams: () => mockedParams.mockedShareParams,
 }));
 
@@ -44,9 +44,20 @@ describe('ShareButton', () => {
     </Provider>
   ));
 
-  it('should render', () => {
+  it('should render when shareParams exist', () => {
     const component = makeComponent();
-    expect(component.find('ShareButton').props()).toMatchObject(mockedParams.mockedShareParams);
+    expect(component.find('ShareButton').props().shareParams).toMatchObject(mockedParams.mockedShareParams);
     expect(component).toMatchSnapshot();
+  });
+  it('should render with gmd icon', () => {
+    jest.mock('../../helpers/isiOSTheme', () => () => false);
+    const component = makeComponent();
+    expect(component.find('ShareButton').props().shareParams).toMatchObject(mockedParams.mockedShareParams);
+    expect(component).toMatchSnapshot();
+  });
+  it('should not render when deeplink is undefined', () => {
+    mockedParams.mockedShareParams.deepLink = undefined;
+    const component = makeComponent();
+    expect(component.html()).toBe(null);
   });
 });
