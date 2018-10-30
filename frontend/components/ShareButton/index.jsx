@@ -4,18 +4,17 @@ import ShareIconGmd from '@shopgate/pwa-ui-material/icons/ShareIcon';
 import Ripple from '@shopgate/pwa-ui-shared/Ripple';
 import PropTypes from 'prop-types';
 import styles from './style';
-import isiOSTheme from '../../helpers/isiOSTheme';
 import getConfig from '../../helpers/getConfig';
 import connect from '../../connector';
 
 const { gmdIcon, iOSIcon } = getConfig();
-const iOSTheme = isiOSTheme();
 /**
  * ShareButton component
  */
 class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
+    iOSTheme: PropTypes.bool.isRequired,
     shareParams: PropTypes.shape(),
   };
 
@@ -26,7 +25,7 @@ class ShareButton extends Component {
    * Gets the icon style.
    * @returns {string}
    */
-  static getIconStyle() {
+  static getIconStyle(iOSTheme) {
     if (iOSTheme) {
       return iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
     }
@@ -37,7 +36,7 @@ class ShareButton extends Component {
    * Renders the share icon depending on theme
    * @returns {JSX}
    */
-  static renderIcon = () => {
+  static renderIcon = (iOSTheme) => {
     if (iOSTheme) {
       return iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
     }
@@ -62,19 +61,18 @@ class ShareButton extends Component {
     if (!this.props.shareParams || this.props.shareParams.deepLink === undefined) {
       return null;
     }
+    const { iOSTheme } = this.props;
 
     return (
-      <div className={iOSTheme ? styles.iOSButtons : styles.androidButtons}>
-        <button
-          className={this.constructor.getIconStyle()}
-          data-test-id="shareIcon"
-          type="button"
-        >
-          <Ripple className={`${styles.ripple}`} onComplete={this.handleClick}>
-            {this.constructor.renderIcon()}
-          </Ripple>
-        </button>
-      </div>
+      <button
+        className={this.constructor.getIconStyle(iOSTheme)}
+        data-test-id="shareIcon"
+        type="button"
+      >
+        <Ripple className={iOSTheme ? `${styles.ripple}` : ''} onComplete={this.handleClick}>
+          {this.constructor.renderIcon(iOSTheme)}
+        </Ripple>
+      </button>
     );
   }
 }

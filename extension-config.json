@@ -3,9 +3,15 @@
   "id": "@shopgate/pdp-native-share",
   "components": [
     {
-      "id": "ShareButton",
-      "path": "frontend/portals/ShareButton",
+      "id": "IosShareButton",
+      "path": "frontend/portals/IosShareButton",
       "target": "product.ctas.before",
+      "type": "portals"
+    },
+    {
+      "id": "GmdShareButton",
+      "path": "frontend/portals/GmdShareButton",
+      "target": "nav-bar.navigator.icons.cart-button.before",
       "type": "portals"
     }
   ],
