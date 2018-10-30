@@ -1,26 +1,6 @@
 import { css } from 'glamor';
 import { themeConfig } from '@shopgate/pwa-common/helpers/config';
 
-const androidButtons = css({
-  position: 'absolute',
-  left: 8,
-  padding: 8,
-  top: -30,
-  display: 'flex',
-  justifyContent: 'flex-end',
-  alignItems: 'center',
-  zIndex: 1,
-}).toString();
-
-const iOSButtons = css({
-  position: 'absolute',
-  right: 68,
-  top: -30,
-  display: 'flex',
-  justifyContent: 'flex-end',
-  alignItems: 'center',
-}).toString();
-
 const buttonProto = {
   display: 'block',
   position: 'relative',
@@ -42,10 +22,13 @@ const buttoniOSThemeMaterialIcon = css({
 }).toString();
 
 const buttonMaterialThemeMaterialIcon = css({
-  ...buttonProto,
-  strokeWidth: 0.25,
-  boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
-}).toString();
+  minWidth: 56,
+  height: 56,
+  fontSize: '1.5rem',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}).toString()
 
 const buttonMaterialThemeiOSIcon = css({
   ...buttonProto,
@@ -58,8 +41,6 @@ const ripple = css({
 }).toString();
 
 export default {
-  androidButtons,
-  iOSButtons,
   buttoniOSThemeiOSIcon,
   buttoniOSThemeMaterialIcon,
   buttonMaterialThemeMaterialIcon,
