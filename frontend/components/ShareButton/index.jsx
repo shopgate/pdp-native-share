@@ -6,42 +6,44 @@ import PropTypes from 'prop-types';
 import styles from './style';
 import getConfig from '../../helpers/getConfig';
 import connect from '../../connector';
+import isiOSTheme from '../../helpers/isiOSTheme';
 
-const { gmdIcon, iOSIcon } = getConfig();
 /**
  * ShareButton component
  */
 class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
-    iOSTheme: PropTypes.bool.isRequired,
     shareParams: PropTypes.shape(),
   };
 
   static defaultProps = {
     shareParams: null,
   };
+
+  static config = getConfig();
+
   /**
    * Gets the icon style.
    * @returns {string}
    */
-  static getIconStyle(iOSTheme) {
-    if (iOSTheme) {
-      return iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
+  static getIconStyle() {
+    if (isiOSTheme()) {
+      return this.config.iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
     }
-    return gmdIcon === 'gmd' ? styles.buttonMaterialThemeMaterialIcon : styles.buttonMaterialThemeiOSIcon;
+    return this.config.gmdIcon === 'gmd' ? styles.buttonMaterialThemeMaterialIcon : styles.buttonMaterialThemeiOSIcon;
   }
 
   /**
    * Renders the share icon depending on theme
    * @returns {JSX}
    */
-  static renderIcon = (iOSTheme) => {
-    if (iOSTheme) {
-      return iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
+  static renderIcon() {
+    if (isiOSTheme()) {
+      return this.config.iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
     }
 
-    return gmdIcon === 'gmd' ? <ShareIconGmd /> : <ShareIconiOS />;
+    return this.config.gmdIcon === 'gmd' ? <ShareIconGmd /> : <ShareIconiOS />;
   }
 
   /**
@@ -61,16 +63,15 @@ class ShareButton extends Component {
     if (!this.props.shareParams || this.props.shareParams.deepLink === undefined) {
       return null;
     }
-    const { iOSTheme } = this.props;
 
     return (
       <button
-        className={this.constructor.getIconStyle(iOSTheme)}
+        className={this.constructor.getIconStyle()}
         data-test-id="shareIcon"
         type="button"
       >
-        <Ripple className={iOSTheme ? `${styles.ripple}` : ''} onComplete={this.handleClick}>
-          {this.constructor.renderIcon(iOSTheme)}
+        <Ripple className={styles.ripple(isiOSTheme())} onComplete={this.handleClick}>
+          {this.constructor.renderIcon()}
         </Ripple>
       </button>
     );

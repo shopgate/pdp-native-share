@@ -2,9 +2,7 @@
 
 exports[`GmdShareButton should render GmdShareButton 1`] = `
 <_default>
-  <MockedShareButton
-    iOSTheme={false}
-  >
+  <MockedShareButton>
     <div>
       ShareButton
     </div>

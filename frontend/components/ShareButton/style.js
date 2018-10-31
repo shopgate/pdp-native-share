@@ -22,12 +22,11 @@ const buttoniOSThemeMaterialIcon = css({
 }).toString();
 
 const buttonMaterialThemeMaterialIcon = css({
+  padding: 0,
+  outline: 0,
   minWidth: 56,
   height: 56,
-  fontSize: '1.5rem',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  fontSize: '1.35rem',
 }).toString()
 
 const buttonMaterialThemeiOSIcon = css({
@@ -35,10 +34,27 @@ const buttonMaterialThemeiOSIcon = css({
   boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
 }).toString();
 
-const ripple = css({
-  padding: 8,
-  fontSize: 24,
-}).toString();
+/**
+ * Ripple style.
+ * @param {boolean} isIos Is iOS theme?
+ * @returns {string}
+ */
+const ripple = (isIos) => {
+  if (isIos) {
+    return css({
+      padding: 8,
+      fontSize: 24,
+    }).toString();
+  }
+
+  return css({
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }).toString();
+};
 
 export default {
   buttoniOSThemeiOSIcon,

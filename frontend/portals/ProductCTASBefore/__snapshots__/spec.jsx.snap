@@ -5,9 +5,7 @@ exports[`IosShareButton should render ShareButton 1`] = `
   <div
     className="css-ssc2ms"
   >
-    <MockedShareButton
-      iOSTheme={true}
-    >
+    <MockedShareButton>
       <div>
         ShareButton
       </div>

@@ -3,13 +3,13 @@ import ShareButton from '../../components/ShareButton';
 import isiOSTheme from '../../helpers/isiOSTheme';
 import styles from './styles';
 
-export default props => {
+export default (props) => {
   if (!isiOSTheme()) {
     return null;
   }
   return (
     <div className={styles.iOSButtons}>
-      <ShareButton { ...props } iOSTheme={true}/>
+      <ShareButton {...props} />
     </div>
   );
 };
