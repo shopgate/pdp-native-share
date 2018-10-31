@@ -13,9 +13,12 @@ exports[`ShareButton should render when shareParams exist 1`] = `
     }
   }
 >
-  <Connect(ShareButton)>
+  <Connect(ShareButton)
+    iOSTheme={true}
+  >
     <ShareButton
       dispatch={[Function]}
+      iOSTheme={true}
       shareItem={[Function]}
       shareParams={
         Object {
@@ -25,70 +28,66 @@ exports[`ShareButton should render when shareParams exist 1`] = `
         }
       }
     >
-      <div
-        className="css-15jwl8y"
+      <button
+        className="css-jm3ed5"
+        data-test-id="shareIcon"
+        type="button"
       >
-        <button
-          className="css-jm3ed5"
-          data-test-id="shareIcon"
-          type="button"
+        <Ripple
+          className="css-zv4pyz"
+          color="#000"
+          disabled={false}
+          fill={false}
+          onComplete={[Function]}
+          overflow={false}
+          size={null}
         >
-          <Ripple
+          <div
+            aria-hidden={true}
             className="css-zv4pyz"
-            color="#000"
-            disabled={false}
-            fill={false}
-            onComplete={[Function]}
-            overflow={false}
-            size={null}
+            data-test-id="Ripple"
+            onClick={[Function]}
+            style={null}
           >
-            <div
-              aria-hidden={true}
-              className="css-zv4pyz"
-              data-test-id="Ripple"
-              onClick={[Function]}
-              style={null}
-            >
-              <ShareIcon>
-                <Icon
-                  className=""
-                  color={null}
-                  content="
+            <ShareIcon>
+              <Icon
+                className=""
+                color={null}
+                content="
     <g>
       <path d=\\"M15.3,6.9c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9h2.1v10.8H6.6V8.7h2.1c0.5,0,0.9-0.4,0.9-0.9S9.2,6.9,8.7,6.9H4.8v14.4 h14.4V6.9H15.3z\\"/>
       <path d=\\"M9.9,5.8l1.4-1.4v8.9c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.4,0.8-0.8V4.5l1.4,1.4c0.2,0.2,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2 c0.3-0.3,0.3-0.8,0-1.1L12,1.5L8.7,4.7C8.4,5,8.4,5.5,8.7,5.8C9,6.1,9.5,6.1,9.9,5.8z\\"/>
   </g>
   "
-                  size="inherit"
-                  viewBox="0 0 24 24"
-                >
-                  <svg
-                    className="css-yys9hb "
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "
+                size="inherit"
+                viewBox="0 0 24 24"
+              >
+                <svg
+                  className="css-yys9hb "
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "
     <g>
       <path d=\\"M15.3,6.9c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9h2.1v10.8H6.6V8.7h2.1c0.5,0,0.9-0.4,0.9-0.9S9.2,6.9,8.7,6.9H4.8v14.4 h14.4V6.9H15.3z\\"/>
       <path d=\\"M9.9,5.8l1.4-1.4v8.9c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.4,0.8-0.8V4.5l1.4,1.4c0.2,0.2,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2 c0.3-0.3,0.3-0.8,0-1.1L12,1.5L8.7,4.7C8.4,5,8.4,5.5,8.7,5.8C9,6.1,9.5,6.1,9.9,5.8z\\"/>
   </g>
   ",
-                      }
                     }
-                    style={
-                      Object {
-                        "fill": null,
-                        "fontSize": "inherit",
-                      }
+                  }
+                  style={
+                    Object {
+                      "fill": null,
+                      "fontSize": "inherit",
                     }
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </Icon>
-              </ShareIcon>
-            </div>
-          </Ripple>
-        </button>
-      </div>
+                  }
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </Icon>
+            </ShareIcon>
+          </div>
+        </Ripple>
+      </button>
     </ShareButton>
   </Connect(ShareButton)>
 </Provider>
@@ -107,9 +106,12 @@ exports[`ShareButton should render with gmd icon 1`] = `
     }
   }
 >
-  <Connect(ShareButton)>
+  <Connect(ShareButton)
+    iOSTheme={false}
+  >
     <ShareButton
       dispatch={[Function]}
+      iOSTheme={false}
       shareItem={[Function]}
       shareParams={
         Object {
@@ -119,70 +121,56 @@ exports[`ShareButton should render with gmd icon 1`] = `
         }
       }
     >
-      <div
-        className="css-15jwl8y"
+      <button
+        className="css-o5gcwy"
+        data-test-id="shareIcon"
+        type="button"
       >
-        <button
-          className="css-jm3ed5"
-          data-test-id="shareIcon"
-          type="button"
+        <Ripple
+          className=""
+          color="#000"
+          disabled={false}
+          fill={false}
+          onComplete={[Function]}
+          overflow={false}
+          size={null}
         >
-          <Ripple
-            className="css-zv4pyz"
-            color="#000"
-            disabled={false}
-            fill={false}
-            onComplete={[Function]}
-            overflow={false}
-            size={null}
+          <div
+            aria-hidden={true}
+            className=""
+            data-test-id="Ripple"
+            onClick={[Function]}
+            style={null}
           >
-            <div
-              aria-hidden={true}
-              className="css-zv4pyz"
-              data-test-id="Ripple"
-              onClick={[Function]}
-              style={null}
-            >
-              <ShareIcon>
-                <Icon
-                  className=""
-                  color={null}
-                  content="
-    <g>
-      <path d=\\"M15.3,6.9c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9h2.1v10.8H6.6V8.7h2.1c0.5,0,0.9-0.4,0.9-0.9S9.2,6.9,8.7,6.9H4.8v14.4 h14.4V6.9H15.3z\\"/>
-      <path d=\\"M9.9,5.8l1.4-1.4v8.9c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.4,0.8-0.8V4.5l1.4,1.4c0.2,0.2,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2 c0.3-0.3,0.3-0.8,0-1.1L12,1.5L8.7,4.7C8.4,5,8.4,5.5,8.7,5.8C9,6.1,9.5,6.1,9.9,5.8z\\"/>
-  </g>
-  "
-                  size="inherit"
+            <ShareIcon>
+              <Icon
+                className=""
+                color={null}
+                content="<path d=\\"M18 16.1364C17.24 16.1364 16.56 16.4376 16.04 16.9095L8.91 12.7428C8.96 12.5119 9 12.281 9 12.04C9 11.7991 8.96 11.5682 8.91 11.3372L15.96 7.21072C16.5 7.71273 17.21 8.02397 18 8.02397C19.66 8.02397 21 6.67859 21 5.01193C21 3.34526 19.66 1.99988 18 1.99988C16.34 1.99988 15 3.34526 15 5.01193C15 5.25289 15.04 5.48381 15.09 5.71474L8.04 9.84124C7.5 9.33924 6.79 9.02799 6 9.02799C4.34 9.02799 3 10.3734 3 12.04C3 13.7067 4.34 15.0521 6 15.0521C6.79 15.0521 7.5 14.7408 8.04 14.2388L15.16 18.4155C15.11 18.6264 15.08 18.8473 15.08 19.0682C15.08 20.6846 16.39 21.9999 18 21.9999C19.61 21.9999 20.92 20.6846 20.92 19.0682C20.92 17.4517 19.61 16.1364 18 16.1364Z\\"/>"
+                size="inherit"
+                viewBox="0 0 24 24"
+              >
+                <svg
+                  className="css-yys9hb "
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "<path d=\\"M18 16.1364C17.24 16.1364 16.56 16.4376 16.04 16.9095L8.91 12.7428C8.96 12.5119 9 12.281 9 12.04C9 11.7991 8.96 11.5682 8.91 11.3372L15.96 7.21072C16.5 7.71273 17.21 8.02397 18 8.02397C19.66 8.02397 21 6.67859 21 5.01193C21 3.34526 19.66 1.99988 18 1.99988C16.34 1.99988 15 3.34526 15 5.01193C15 5.25289 15.04 5.48381 15.09 5.71474L8.04 9.84124C7.5 9.33924 6.79 9.02799 6 9.02799C4.34 9.02799 3 10.3734 3 12.04C3 13.7067 4.34 15.0521 6 15.0521C6.79 15.0521 7.5 14.7408 8.04 14.2388L15.16 18.4155C15.11 18.6264 15.08 18.8473 15.08 19.0682C15.08 20.6846 16.39 21.9999 18 21.9999C19.61 21.9999 20.92 20.6846 20.92 19.0682C20.92 17.4517 19.61 16.1364 18 16.1364Z\\"/>",
+                    }
+                  }
+                  style={
+                    Object {
+                      "fill": null,
+                      "fontSize": "inherit",
+                    }
+                  }
                   viewBox="0 0 24 24"
-                >
-                  <svg
-                    className="css-yys9hb "
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "
-    <g>
-      <path d=\\"M15.3,6.9c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9h2.1v10.8H6.6V8.7h2.1c0.5,0,0.9-0.4,0.9-0.9S9.2,6.9,8.7,6.9H4.8v14.4 h14.4V6.9H15.3z\\"/>
-      <path d=\\"M9.9,5.8l1.4-1.4v8.9c0,0.4,0.4,0.8,0.8,0.8c0.4,0,0.8-0.4,0.8-0.8V4.5l1.4,1.4c0.2,0.2,0.4,0.2,0.6,0.2s0.4-0.1,0.6-0.2 c0.3-0.3,0.3-0.8,0-1.1L12,1.5L8.7,4.7C8.4,5,8.4,5.5,8.7,5.8C9,6.1,9.5,6.1,9.9,5.8z\\"/>
-  </g>
-  ",
-                      }
-                    }
-                    style={
-                      Object {
-                        "fill": null,
-                        "fontSize": "inherit",
-                      }
-                    }
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </Icon>
-              </ShareIcon>
-            </div>
-          </Ripple>
-        </button>
-      </div>
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </Icon>
+            </ShareIcon>
+          </div>
+        </Ripple>
+      </button>
     </ShareButton>
   </Connect(ShareButton)>
 </Provider>

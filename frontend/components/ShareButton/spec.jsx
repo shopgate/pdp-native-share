@@ -9,13 +9,12 @@ const mockedConfig = {
 };
 
 jest.mock('../../helpers/getConfig', () => () => mockedConfig);
-jest.mock('../../helpers/isiOSTheme', () => () => true);
 const mockedParams = {
   mockedShareParams: {
     title: 'title',
     imageURL: 'imageURL',
     deepLink: 'deepLink',
-  },
+  }
 };
 
 jest.mock('../../selectors/index', () => ({
@@ -38,26 +37,25 @@ describe('ShareButton', () => {
   // eslint-disable-next-line global-require
   const ShareButton = require('./index').default;
   // eslint-disable-next-line require-jsdoc
-  const makeComponent = () => mount((
+  const makeComponent = (iOSTheme) => mount((
     <Provider store={configureStore()({})}>
-      <ShareButton />
+      <ShareButton iOSTheme={iOSTheme} />
     </Provider>
   ));
 
   it('should render when shareParams exist', () => {
-    const component = makeComponent();
+    const component = makeComponent(true);
     expect(component.find('ShareButton').props().shareParams).toMatchObject(mockedParams.mockedShareParams);
     expect(component).toMatchSnapshot();
   });
   it('should render with gmd icon', () => {
-    jest.mock('../../helpers/isiOSTheme', () => () => false);
-    const component = makeComponent();
+    const component = makeComponent(false);
     expect(component.find('ShareButton').props().shareParams).toMatchObject(mockedParams.mockedShareParams);
     expect(component).toMatchSnapshot();
   });
   it('should not render when deeplink is undefined', () => {
     mockedParams.mockedShareParams.deepLink = undefined;
-    const component = makeComponent();
+    const component = makeComponent(true);
     expect(component.html()).toBe(null);
   });
 });
