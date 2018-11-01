@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "id": "@shopgate/pdp-native-share",
+  "components": [
+    {
+      "id": "ProductCTASBefore",
+      "path": "frontend/portals/ProductCTASBefore",
+      "target": "product.ctas.before",
+      "type": "portals"
+    },
+    {
+      "id": "NavbarNavigatorCartButtonBefore",
+      "path": "frontend/portals/NavbarNavigatorCartButtonBefore",
+      "target": "nav-bar.navigator.icons.cart-button.before",
+      "type": "portals"
+    }
+  ],
+  "steps": [
+  ],
+  "configuration": {
+    "iOSIcon": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "ios",
+      "params": {
+        "required": true,
+        "type": "text",
+        "label": "iOS icon style"
+      }
+    },
+    "gmdIcon": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": "gmd",
+      "params": {
+        "required": true,
+        "type": "text",
+        "label": "Google Material Design icon style"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GmdShareButton should render GmdShareButton 1`] = `
+<_default>
+  <MockedShareButton>
+    <div>
+      ShareButton
+    </div>
+  </MockedShareButton>
+</_default>
+`;

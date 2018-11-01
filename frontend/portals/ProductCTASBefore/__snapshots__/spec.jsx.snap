@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IosShareButton should render ShareButton 1`] = `
+<_default>
+  <div
+    className="css-ssc2ms"
+  >
+    <MockedShareButton>
+      <div>
+        ShareButton
+      </div>
+    </MockedShareButton>
+  </div>
+</_default>
+`;
