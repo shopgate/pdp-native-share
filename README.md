@@ -8,7 +8,18 @@ This extension will also add a Configuration field to the Connect merchant admin
 
 ## Configuration
 
-Configuration is available via a string input in your Shopgate Connect Admin for determination on icon usage. Use string 'ios' for iOS Share icon and string 'gmd' for Material icon.
+Set the following values in your Shopgate Connect Admin:
+* `iOSIcon` - (ios/gmd) Defaults to "ios". Set to "gmd" in order to use the GMD icon on the iOS theme. 
+* `gmdIcon` - (ios/gmd) Defaults to "gmd". Set to "ios" in order to use the iOS icon on the GMD theme.
+
+### Example
+
+```json
+{
+  "iOSIcon": "gmd",
+  "gmdIcon": "ios"
+}
+```
 
 ## Changelog
 
