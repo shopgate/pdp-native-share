@@ -19,7 +19,7 @@ describe('Selectors', () => {
           },
         },
       };
-      const result = getShareParams(state);
+      const result = getShareParams(state, {});
       expect(result).toEqual(null);
     });
     it('should return parameters for share command', () => {
@@ -39,7 +39,7 @@ describe('Selectors', () => {
           },
         },
       };
-      const result = getShareParams(state);
+      const result = getShareParams(state, { productId: 'foo' });
       expect(result).toEqual(state.product.productsById.foo.productData);
     });
   });

@@ -26,7 +26,7 @@ exports[`ShareButton should render when shareParams exist and handle click 1`] =
       }
     >
       <button
-        className="css-jm3ed5"
+        className="css-lard6l"
         data-test-id="shareIcon"
         type="button"
       >
@@ -35,6 +35,7 @@ exports[`ShareButton should render when shareParams exist and handle click 1`] =
           color="#000"
           disabled={false}
           fill={false}
+          onClick={[Function]}
           onComplete={[Function]}
           overflow={false}
           size={null}
@@ -116,7 +117,7 @@ exports[`ShareButton should render with gmd icon relying on theme 1`] = `
       }
     >
       <button
-        className="css-7w7kox"
+        className="css-1sj1wok"
         data-test-id="shareIcon"
         type="button"
       >
@@ -125,6 +126,7 @@ exports[`ShareButton should render with gmd icon relying on theme 1`] = `
           color="#000"
           disabled={false}
           fill={false}
+          onClick={[Function]}
           onComplete={[Function]}
           overflow={false}
           size={null}
@@ -196,7 +198,7 @@ exports[`ShareButton should render with gmd relying on config 1`] = `
       }
     >
       <button
-        className="css-2junj4"
+        className="css-10dnx6t"
         data-test-id="shareIcon"
         type="button"
       >
@@ -205,6 +207,7 @@ exports[`ShareButton should render with gmd relying on config 1`] = `
           color="#000"
           disabled={false}
           fill={false}
+          onClick={[Function]}
           onComplete={[Function]}
           overflow={false}
           size={null}
@@ -276,7 +279,7 @@ exports[`ShareButton should render with ios icon relying on theme 1`] = `
       }
     >
       <button
-        className="css-jm3ed5"
+        className="css-lard6l"
         data-test-id="shareIcon"
         type="button"
       >
@@ -285,6 +288,7 @@ exports[`ShareButton should render with ios icon relying on theme 1`] = `
           color="#000"
           disabled={false}
           fill={false}
+          onClick={[Function]}
           onComplete={[Function]}
           overflow={false}
           size={null}
@@ -375,6 +379,7 @@ exports[`ShareButton should render with ios relying on config 1`] = `
           color="#000"
           disabled={false}
           fill={false}
+          onClick={[Function]}
           onComplete={[Function]}
           overflow={false}
           size={null}

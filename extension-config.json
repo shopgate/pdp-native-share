@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "id": "@shopgate/pdp-native-share",
   "components": [
     {
@@ -11,7 +11,7 @@
     {
       "id": "NavbarNavigatorCartButtonBefore",
       "path": "frontend/portals/NavbarNavigatorCartButtonBefore",
-      "target": "nav-bar.navigator.icons.cart-button.before",
+      "target": "app-bar.cart-button.before",
       "type": "portals"
     }
   ],
