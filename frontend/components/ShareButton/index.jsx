@@ -3,6 +3,7 @@ import ShareIconiOS from '@shopgate/pwa-ui-ios/icons/ShareIcon';
 import ShareIconGmd from '@shopgate/pwa-ui-material/icons/ShareIcon';
 import Ripple from '@shopgate/pwa-ui-shared/Ripple';
 import PropTypes from 'prop-types';
+import { withPageProductId } from '@shopgate/pwa-extension-kit/connectors';
 import styles from './style';
 import getConfig from '../../helpers/getConfig';
 import connect from '../../connector';
@@ -78,4 +79,4 @@ class ShareButton extends Component {
   }
 }
 
-export default connect(ShareButton);
+export default withPageProductId(connect(ShareButton));

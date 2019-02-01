@@ -24,6 +24,10 @@ jest.mock('../../selectors/index', () => ({
   getShareParams: () => mockedParams.mockedShareParams,
 }));
 
+jest.mock('@shopgate/pwa-extension-kit/connectors', () => ({
+  withPageProductId: WrappedComponent => () => <WrappedComponent productId="foo" />,
+}));
+
 /**
  * Mocked function for shareItem
  * @param {Object} mockedShareParams mocked parameters
