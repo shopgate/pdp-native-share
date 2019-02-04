@@ -18,7 +18,11 @@ const mockedParams = {
 };
 
 let mockedIsIOS = true;
-jest.mock('../../helpers/isiOSTheme', () => () => mockedIsIOS);
+jest.mock('@shopgate/pwa-extension-kit', () => ({
+  env: {
+    isIOSTheme: () => mockedIsIOS
+  }
+}));
 
 jest.mock('../../selectors/index', () => ({
   getShareParams: () => mockedParams.mockedShareParams,

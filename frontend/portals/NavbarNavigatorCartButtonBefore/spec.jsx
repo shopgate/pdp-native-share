@@ -6,7 +6,11 @@ const MockedShareButton = () => (<div>ShareButton</div>);
 jest.mock('../../components/ShareButton', () => MockedShareButton);
 
 let mockedIsIOS = false;
-jest.mock('../../helpers/isiOSTheme', () => () => mockedIsIOS);
+jest.mock('@shopgate/pwa-extension-kit', () => ({
+  env: {
+    isIOSTheme: () => mockedIsIOS
+  }
+}));
 
 let mockedPattern = '/item/:productId';
 jest.mock('@shopgate/pwa-extension-kit/connectors', () => ({
