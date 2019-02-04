@@ -5,9 +5,6 @@ describe('Selectors', () => {
     it('should return null when product Id not found', () => {
       const state = {
         product: {
-          currentProduct: {
-            productId: 'bar',
-          },
           productsById: {
             foo: {
               productData: {
@@ -19,28 +16,48 @@ describe('Selectors', () => {
           },
         },
       };
-      const result = getShareParams(state);
+      const result = getShareParams(state, {});
       expect(result).toEqual(null);
     });
     it('should return parameters for share command', () => {
       const state = {
         product: {
-          currentProduct: {
-            productId: 'foo',
-          },
           productsById: {
             foo: {
               productData: {
-                name: undefined,
-                featuredImageUrl: undefined,
-                productUrl: undefined,
+                name: 'Name',
+                featuredImageUrl: 'https://example.com/image',
+                productUrl: 'https://example.com',
               },
             },
           },
         },
       };
-      const result = getShareParams(state);
-      expect(result).toEqual(state.product.productsById.foo.productData);
+      const result = getShareParams(state, { productId: 'foo' });
+      expect(result).toEqual({
+        deepLink: 'https://example.com',
+        imageURL: 'https://example.com/image',
+        title: 'Name',
+      });
+    });
+
+    it('should return sanitized imageURL', () => {
+      const state = {
+        product: {
+          productsById: {
+            foo: {
+              productData: {
+                name: 'Name',
+                featuredImageUrl: 'https://img-cdn.shopgate.com',
+                productUrl: 'https://example.com',
+              },
+            },
+          },
+        },
+      };
+      const result = getShareParams(state, { productId: 'foo' });
+      expect(result.imageURL.includes('w=')).toBe(true);
+      expect(result.imageURL.includes('h=')).toBe(true);
     });
   });
 });

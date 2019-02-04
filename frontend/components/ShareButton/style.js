@@ -12,6 +12,7 @@ const buttonProto = {
   color: themeConfig.colors.accent,
   outline: 0,
   zIndex: 1,
+  boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
 };
 
 const buttoniOSThemeiOSIcon = css(buttonProto).toString();
@@ -23,11 +24,12 @@ const buttoniOSThemeMaterialIcon = css({
 
 const buttonMaterialThemeMaterialIcon = css({
   padding: 0,
+  marginLeft: -16,
   outline: 0,
   minWidth: 56,
   height: 56,
   fontSize: '1.35rem',
-}).toString()
+}).toString();
 
 const buttonMaterialThemeiOSIcon = css({
   ...buttonProto,
