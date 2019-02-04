@@ -6,7 +6,11 @@ import ShareButton from '../../components/ShareButton';
 const MockedShareButton = () => (<div>ShareButton</div>);
 jest.mock('../../components/ShareButton', () => MockedShareButton);
 let mockedIsIOS = true;
-jest.mock('../../helpers/isiOSTheme', () => () => mockedIsIOS);
+jest.mock('@shopgate/pwa-extension-kit', () => ({
+  env: {
+    isIOSTheme: () => mockedIsIOS
+  }
+}));
 
 describe('IosShareButton', () => {
   // eslint-disable-next-line global-require

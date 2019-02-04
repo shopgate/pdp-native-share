@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ShareIconiOS from '@shopgate/pwa-ui-ios/icons/ShareIcon';
 import ShareIconGmd from '@shopgate/pwa-ui-material/icons/ShareIcon';
 import Ripple from '@shopgate/pwa-ui-shared/Ripple';
-import PropTypes from 'prop-types';
+import { withPageProductId } from '@shopgate/pwa-extension-kit/connectors';
+import { env } from '@shopgate/pwa-extension-kit'
 import styles from './style';
 import getConfig from '../../helpers/getConfig';
 import connect from '../../connector';
-import isiOSTheme from '../../helpers/isiOSTheme';
 
 /**
  * ShareButton component
@@ -28,7 +29,7 @@ class ShareButton extends Component {
    * @returns {string}
    */
   static getIconStyle() {
-    if (isiOSTheme()) {
+    if (env.isIOSTheme()) {
       return this.config.iOSIcon === 'ios' ? styles.buttoniOSThemeiOSIcon : styles.buttoniOSThemeMaterialIcon;
     }
     return this.config.gmdIcon === 'gmd' ? styles.buttonMaterialThemeMaterialIcon : styles.buttonMaterialThemeiOSIcon;
@@ -39,7 +40,7 @@ class ShareButton extends Component {
    * @returns {JSX}
    */
   static renderIcon() {
-    if (isiOSTheme()) {
+    if (env.isIOSTheme()) {
       return this.config.iOSIcon === 'ios' ? <ShareIconiOS /> : <ShareIconGmd />;
     }
 
@@ -53,7 +54,7 @@ class ShareButton extends Component {
    */
   handleClick = () => {
     this.props.shareItem();
-  }
+  };
 
   /**
    * Renders the components
@@ -70,7 +71,7 @@ class ShareButton extends Component {
         data-test-id="shareIcon"
         type="button"
       >
-        <Ripple className={styles.ripple(isiOSTheme())} onComplete={this.handleClick}>
+        <Ripple className={styles.ripple(env.isIOSTheme())} onComplete={this.handleClick}>
           {this.constructor.renderIcon()}
         </Ripple>
       </button>
@@ -78,4 +79,4 @@ class ShareButton extends Component {
   }
 }
 
-export default connect(ShareButton);
+export default withPageProductId(connect(ShareButton));

@@ -5,12 +5,13 @@ import { getShareParams } from './selectors';
 /**
  * Maps state to props
  * @param {Object} state State.
+ * @param {Object} props props.
  * @returns {Object}
  */
-const mapStateToProps = state => ({
-  shareParams: getShareParams(state),
+const mapStateToProps = (state, props) => ({
+  shareParams: getShareParams(state, props),
   shareItem: () => {
-    shareItem(getShareParams(state));
+    shareItem(getShareParams(state, props));
   },
 });
 
