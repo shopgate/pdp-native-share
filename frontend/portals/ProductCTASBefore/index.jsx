@@ -1,10 +1,10 @@
 import React from 'react';
 import ShareButton from '../../components/ShareButton';
-import isiOSTheme from '../../helpers/isiOSTheme';
+import isIOSTheme from '@shopgate/pwa-extension-kit/env/helpers/isIOSTheme';
 import styles from './styles';
 
 export default (props) => {
-  if (!isiOSTheme()) {
+  if (!isIOSTheme()) {
     return null;
   }
   return (

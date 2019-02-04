@@ -1,10 +1,17 @@
 import React from 'react';
+import { ITEM_PATTERN } from '@shopgate/pwa-common-commerce/product/constants';
+import { withPageState } from '@shopgate/pwa-extension-kit/connectors';
+import isIOSTheme from '@shopgate/pwa-extension-kit/env/helpers/isIOSTheme';
 import ShareButton from '../../components/ShareButton';
-import isiOSTheme from '../../helpers/isiOSTheme';
 
-export default (props) => {
-  if (isiOSTheme()) {
+const NavbarNavigatorCartButtonBefore =  ({ pattern, ...otherProps }) => {
+  if (pattern !== ITEM_PATTERN) {
     return null;
   }
-  return <ShareButton {...props} />;
+  if (isIOSTheme()) {
+    return null;
+  }
+  return <ShareButton {...otherProps} />;
 };
+
+export default withPageState(NavbarNavigatorCartButtonBefore);
