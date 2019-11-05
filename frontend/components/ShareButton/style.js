@@ -12,7 +12,7 @@ const buttonProto = {
   color: themeConfig.colors.accent,
   outline: 0,
   zIndex: 1,
-  boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
+  boxShadow: themeConfig.shadows.buttons.elevated,
 };
 
 const buttoniOSThemeiOSIcon = css(buttonProto).toString();
@@ -33,7 +33,7 @@ const buttonMaterialThemeMaterialIcon = css({
 
 const buttonMaterialThemeiOSIcon = css({
   ...buttonProto,
-  boxShadow: '0 8px 13px rgba(0, 0, 0, 0.25)',
+  boxShadow: themeConfig.shadows.buttons.elevated,
 }).toString();
 
 /**
