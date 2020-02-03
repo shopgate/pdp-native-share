@@ -18,13 +18,13 @@ const mockedParams = {
 };
 
 let mockedIsIOS = true;
-jest.mock('@shopgate/pwa-extension-kit/env/helpers/isIOSTheme', () => () => mockedIsIOS);
+jest.mock('@shopgate-ps/pwa-extension-kit/env/helpers/isIOSTheme', () => () => mockedIsIOS);
 
 jest.mock('../../selectors/index', () => ({
   getShareParams: () => mockedParams.mockedShareParams,
 }));
 
-jest.mock('@shopgate/pwa-extension-kit/connectors', () => ({
+jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
   withPageProductId: WrappedComponent => () => <WrappedComponent productId="foo" />,
 }));
 
@@ -89,6 +89,6 @@ describe('ShareButton', () => {
   it('should not render when deeplink is undefined', () => {
     mockedParams.mockedShareParams.deepLink = undefined;
     const component = makeComponent();
-    expect(component.html()).toBe(null);
+    expect(component.html()).toBe('');
   });
 });

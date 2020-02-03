@@ -1,6 +1,6 @@
 import React from 'react';
+import isIOSTheme from '@shopgate-ps/pwa-extension-kit/env/helpers/isIOSTheme';
 import ShareButton from '../../components/ShareButton';
-import isIOSTheme from '@shopgate/pwa-extension-kit/env/helpers/isIOSTheme';
 import styles from './styles';
 
 export default (props) => {
