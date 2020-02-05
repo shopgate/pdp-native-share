@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import ShareButton from '../../components/ShareButton';
 
 // eslint-disable-next-line require-jsdoc
 const MockedShareButton = () => (<div>ShareButton</div>);

@@ -25,14 +25,14 @@
     "@babel/runtime": "^7.5.5",
     "@babel/runtime-corejs3": "^7.5.5",
     "@hot-loader/react-dom": "^16.8.6",
-    "@shopgate/engage": "6.8.0",
-    "@shopgate/pwa-common": "6.8.0",
-    "@shopgate/pwa-common-commerce": "6.8.0",
-    "@shopgate/pwa-core": "6.8.0",
-    "@shopgate/pwa-ui-ios": "6.8.0",
-    "@shopgate/pwa-ui-material": "6.8.0",
-    "@shopgate/pwa-ui-shared": "6.8.0",
-    "@shopgate/pwa-unit-test": "6.8.0",
+    "@shopgate/engage": "^6.8.0",
+    "@shopgate/pwa-common": "^6.8.0",
+    "@shopgate/pwa-common-commerce": "^6.8.0",
+    "@shopgate/pwa-core": "^6.8.0",
+    "@shopgate/pwa-ui-ios": "^6.8.0",
+    "@shopgate/pwa-ui-material": "^6.8.0",
+    "@shopgate/pwa-ui-shared": "^6.8.0",
+    "@shopgate/pwa-unit-test": "^6.8.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-transform-export-extensions": "^6.22.0",
@@ -52,12 +52,12 @@
     "reselect": "^3.0.1"
   },
   "peerDependencies": {
-    "@shopgate/pwa-common": "6.8.0",
-    "@shopgate/pwa-common-commerce": "6.8.0",
-    "@shopgate/pwa-core": "6.8.0",
-    "@shopgate/pwa-ui-ios": "6.8.0",
-    "@shopgate/pwa-ui-material": "6.8.0",
-    "@shopgate/pwa-ui-shared": "6.8.0"
+    "@shopgate/pwa-common": "^6.8.0",
+    "@shopgate/pwa-common-commerce": "^6.8.0",
+    "@shopgate/pwa-core": "^6.8.0",
+    "@shopgate/pwa-ui-ios": "^6.8.0",
+    "@shopgate/pwa-ui-material": "^6.8.0",
+    "@shopgate/pwa-ui-shared": "^6.8.0"
   },
   "dependencies": {
     "@shopgate-ps/pwa-extension-kit": "^0.6.0"
