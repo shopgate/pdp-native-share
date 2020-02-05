@@ -3,7 +3,7 @@
 exports[`IosShareButton should render ShareButton 1`] = `
 <_default>
   <div
-    className="css-ssc2ms"
+    className="css-1npkug1"
   >
     <MockedShareButton>
       <div>

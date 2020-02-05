@@ -6,10 +6,10 @@ const MockedShareButton = () => (<div>ShareButton</div>);
 jest.mock('../../components/ShareButton', () => MockedShareButton);
 
 let mockedIsIOS = false;
-jest.mock('@shopgate/pwa-extension-kit/env/helpers/isIOSTheme', () => () => mockedIsIOS);
+jest.mock('@shopgate-ps/pwa-extension-kit/env/helpers/isIOSTheme', () => () => mockedIsIOS);
 
 let mockedPattern = '/item/:productId';
-jest.mock('@shopgate/pwa-extension-kit/connectors', () => ({
+jest.mock('@shopgate-ps/pwa-extension-kit/connectors', () => ({
   withPageState: WrappedComponent => () => <WrappedComponent pattern={mockedPattern} />,
 }));
 
@@ -25,13 +25,13 @@ describe('GmdShareButton', () => {
   it('should render null for iOS theme', () => {
     mockedIsIOS = true;
     const component = mount(<ShareButton />);
-    expect(component.html()).toBe(null);
+    expect(component.html()).toBe('');
   });
 
   it('should render null for different pages', () => {
     mockedPattern = '/';
     mockedIsIOS = false;
     const component = mount(<ShareButton />);
-    expect(component.html()).toBe(null);
+    expect(component.html()).toBe('');
   });
 });

@@ -1,10 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ITEM_PATTERN } from '@shopgate/pwa-common-commerce/product/constants';
-import { withPageState } from '@shopgate/pwa-extension-kit/connectors';
-import isIOSTheme from '@shopgate/pwa-extension-kit/env/helpers/isIOSTheme';
+import { withPageState } from '@shopgate-ps/pwa-extension-kit/connectors';
+import isIOSTheme from '@shopgate-ps/pwa-extension-kit/env/helpers/isIOSTheme';
 import ShareButton from '../../components/ShareButton';
 
-const NavbarNavigatorCartButtonBefore =  ({ pattern, ...otherProps }) => {
+/**
+ * @returns {JSX}
+ */
+const NavbarNavigatorCartButtonBefore = ({ pattern, ...otherProps }) => {
   if (pattern !== ITEM_PATTERN) {
     return null;
   }
@@ -12,6 +16,14 @@ const NavbarNavigatorCartButtonBefore =  ({ pattern, ...otherProps }) => {
     return null;
   }
   return <ShareButton {...otherProps} />;
+};
+
+NavbarNavigatorCartButtonBefore.propTypes = {
+  pattern: PropTypes.string,
+};
+
+NavbarNavigatorCartButtonBefore.defaultProps = {
+  pattern: null,
 };
 
 export default withPageState(NavbarNavigatorCartButtonBefore);
