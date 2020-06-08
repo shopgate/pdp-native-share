@@ -15,13 +15,15 @@ import connect from '../../connector';
 class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
-    shareParams: PropTypes.shape(),
+    className: PropTypes.string,
     rippleClassname: PropTypes.string,
+    shareParams: PropTypes.shape(),
   };
 
   static defaultProps = {
-    shareParams: null,
     rippleClassname: '',
+    className: '',
+    shareParams: null,
   };
 
   static config = getConfig();
@@ -69,7 +71,7 @@ class ShareButton extends Component {
 
     return (
       <button
-        className={this.constructor.getIconStyle()}
+        className={`${this.constructor.getIconStyle()} ${this.props.className}`}
         data-test-id="shareIcon"
         type="button"
       >
