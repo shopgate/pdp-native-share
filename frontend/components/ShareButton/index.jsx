@@ -16,10 +16,12 @@ class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
     shareParams: PropTypes.shape(),
+    rippleClassname: PropTypes.string,
   };
 
   static defaultProps = {
     shareParams: null,
+    rippleClassname: '',
   };
 
   static config = getConfig();
@@ -71,7 +73,7 @@ class ShareButton extends Component {
         data-test-id="shareIcon"
         type="button"
       >
-        <Ripple className={styles.ripple(isIOSTheme())} onComplete={this.handleClick}>
+        <Ripple className={`${styles.ripple(isIOSTheme())} ${this.props.rippleClassname}`} onComplete={this.handleClick}>
           {this.constructor.renderIcon()}
         </Ripple>
       </button>
