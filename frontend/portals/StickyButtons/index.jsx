@@ -9,7 +9,7 @@ const button = css({
 }).toString();
 
 const rippleButton = css({
-  fontSize: 29,
+  fontSize: '29px !important',
 }).toString();
 
 export default (props) => {
