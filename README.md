@@ -3,21 +3,23 @@
 [![GitHub license](http://dmlc.github.io/img/apache2.svg)](LICENSE)
 [![Build Status](https://travis-ci.org/shopgate/ext-pdp-native-share.svg?branch=master)](https://travis-ci.org/shopgate/ext-pdp-native-share) [![Coverage Status](https://coveralls.io/repos/github/shopgate/ext-pdp-native-share/badge.svg?branch=master)](https://coveralls.io/github/shopgate/ext-pdp-native-share?branch=master)
 
-This extension will create a button for the native share app command on product detail pages for iOS and Android devices. 
+This extension will create a button for the native share app command on product detail pages for iOS and Android devices.
 This extension will also add a Configuration field to the Connect merchant admin to determine which svg icon to use. 'ios' or 'gmd'
 
 ## Configuration
 
 Set the following values in your Shopgate Connect Admin:
-* `iOSIcon` - (ios/gmd) Defaults to "ios". Set to "gmd" in order to use the GMD icon on the iOS theme. 
+* `iOSIcon` - (ios/gmd) Defaults to "ios". Set to "gmd" in order to use the GMD icon on the iOS theme.
 * `gmdIcon` - (ios/gmd) Defaults to "gmd". Set to "ios" in order to use the iOS icon on the GMD theme.
+* `useWithStickyButtons` - (true/false) Defaults to "false". Set to "true" in order to make it compatible with sticky-pdp-buttons extension.
 
 ### Example
 
 ```json
 {
   "iOSIcon": "gmd",
-  "gmdIcon": "ios"
+  "gmdIcon": "ios",
+  "useWithStickyButtons": false,
 }
 ```
 

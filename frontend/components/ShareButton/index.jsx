@@ -15,10 +15,14 @@ import connect from '../../connector';
 class ShareButton extends Component {
   static propTypes = {
     shareItem: PropTypes.func.isRequired,
+    className: PropTypes.string,
+    rippleClassname: PropTypes.string,
     shareParams: PropTypes.shape(),
   };
 
   static defaultProps = {
+    rippleClassname: '',
+    className: '',
     shareParams: null,
   };
 
@@ -67,11 +71,11 @@ class ShareButton extends Component {
 
     return (
       <button
-        className={this.constructor.getIconStyle()}
+        className={`${this.constructor.getIconStyle()} ${this.props.className}`}
         data-test-id="shareIcon"
         type="button"
       >
-        <Ripple className={styles.ripple(isIOSTheme())} onComplete={this.handleClick}>
+        <Ripple className={`${styles.ripple(isIOSTheme())} ${this.props.rippleClassname}`} onComplete={this.handleClick}>
           {this.constructor.renderIcon()}
         </Ripple>
       </button>

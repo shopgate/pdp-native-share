@@ -1,11 +1,17 @@
 {
-  "version": "2.0.2",
+  "version": "2.1.0",
   "id": "@shopgate/pdp-native-share",
   "components": [
     {
       "id": "ProductCTASBefore",
       "path": "frontend/portals/ProductCTASBefore",
       "target": "product.ctas.before",
+      "type": "portals"
+    },
+    {
+      "id": "StickyButtons",
+      "path": "frontend/portals/StickyButtons",
+      "target": "product.sticky-buttons.before",
       "type": "portals"
     },
     {
@@ -17,6 +23,15 @@
   ],
   "steps": [],
   "configuration": {
+    "useWithStickyButtons": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": false,
+      "params": {
+        "type": "checkbox",
+        "label": "Set to true to make it compatible with pdp-sticky-buttons extension"
+      }
+    },
     "iOSIcon": {
       "type": "admin",
       "destination": "frontend",
