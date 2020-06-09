@@ -18,8 +18,10 @@ exports[`ShareButton should render when shareParams exist and handle click 1`] =
       productId="foo"
     >
       <ShareButton
+        className=""
         dispatch={[Function]}
         productId="foo"
+        rippleClassname=""
         shareItem={[Function]}
         shareParams={
           Object {
@@ -30,12 +32,12 @@ exports[`ShareButton should render when shareParams exist and handle click 1`] =
         }
       >
         <button
-          className="css-lard6l"
+          className="css-lard6l "
           data-test-id="shareIcon"
           type="button"
         >
           <Ripple
-            className="css-zv4pyz"
+            className="css-zv4pyz "
             color="#000"
             disabled={false}
             fill={false}
@@ -45,7 +47,7 @@ exports[`ShareButton should render when shareParams exist and handle click 1`] =
             size={null}
           >
             <div
-              className="css-zv4pyz"
+              className="css-zv4pyz "
               data-test-id="Ripple"
               onClick={[Function]}
               style={null}
@@ -103,8 +105,10 @@ exports[`ShareButton should render with gmd icon relying on theme 1`] = `
       productId="foo"
     >
       <ShareButton
+        className=""
         dispatch={[Function]}
         productId="foo"
+        rippleClassname=""
         shareItem={[Function]}
         shareParams={
           Object {
@@ -115,12 +119,12 @@ exports[`ShareButton should render with gmd icon relying on theme 1`] = `
         }
       >
         <button
-          className="css-1sj1wok"
+          className="css-1sj1wok "
           data-test-id="shareIcon"
           type="button"
         >
           <Ripple
-            className="css-ied7gv"
+            className="css-ied7gv "
             color="#000"
             disabled={false}
             fill={false}
@@ -130,7 +134,7 @@ exports[`ShareButton should render with gmd icon relying on theme 1`] = `
             size={null}
           >
             <div
-              className="css-ied7gv"
+              className="css-ied7gv "
               data-test-id="Ripple"
               onClick={[Function]}
               style={null}
@@ -188,8 +192,10 @@ exports[`ShareButton should render with gmd relying on config 1`] = `
       productId="foo"
     >
       <ShareButton
+        className=""
         dispatch={[Function]}
         productId="foo"
+        rippleClassname=""
         shareItem={[Function]}
         shareParams={
           Object {
@@ -200,12 +206,12 @@ exports[`ShareButton should render with gmd relying on config 1`] = `
         }
       >
         <button
-          className="css-10dnx6t"
+          className="css-10dnx6t "
           data-test-id="shareIcon"
           type="button"
         >
           <Ripple
-            className="css-zv4pyz"
+            className="css-zv4pyz "
             color="#000"
             disabled={false}
             fill={false}
@@ -215,7 +221,7 @@ exports[`ShareButton should render with gmd relying on config 1`] = `
             size={null}
           >
             <div
-              className="css-zv4pyz"
+              className="css-zv4pyz "
               data-test-id="Ripple"
               onClick={[Function]}
               style={null}
@@ -273,8 +279,10 @@ exports[`ShareButton should render with ios icon relying on theme 1`] = `
       productId="foo"
     >
       <ShareButton
+        className=""
         dispatch={[Function]}
         productId="foo"
+        rippleClassname=""
         shareItem={[Function]}
         shareParams={
           Object {
@@ -285,12 +293,12 @@ exports[`ShareButton should render with ios icon relying on theme 1`] = `
         }
       >
         <button
-          className="css-lard6l"
+          className="css-lard6l "
           data-test-id="shareIcon"
           type="button"
         >
           <Ripple
-            className="css-zv4pyz"
+            className="css-zv4pyz "
             color="#000"
             disabled={false}
             fill={false}
@@ -300,7 +308,7 @@ exports[`ShareButton should render with ios icon relying on theme 1`] = `
             size={null}
           >
             <div
-              className="css-zv4pyz"
+              className="css-zv4pyz "
               data-test-id="Ripple"
               onClick={[Function]}
               style={null}
@@ -358,8 +366,10 @@ exports[`ShareButton should render with ios relying on config 1`] = `
       productId="foo"
     >
       <ShareButton
+        className=""
         dispatch={[Function]}
         productId="foo"
+        rippleClassname=""
         shareItem={[Function]}
         shareParams={
           Object {
@@ -370,12 +380,12 @@ exports[`ShareButton should render with ios relying on config 1`] = `
         }
       >
         <button
-          className="css-lard6l"
+          className="css-lard6l "
           data-test-id="shareIcon"
           type="button"
         >
           <Ripple
-            className="css-ied7gv"
+            className="css-ied7gv "
             color="#000"
             disabled={false}
             fill={false}
@@ -385,7 +395,7 @@ exports[`ShareButton should render with ios relying on config 1`] = `
             size={null}
           >
             <div
-              className="css-ied7gv"
+              className="css-ied7gv "
               data-test-id="Ripple"
               onClick={[Function]}
               style={null}
