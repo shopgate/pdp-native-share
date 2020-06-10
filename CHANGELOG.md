@@ -2,6 +2,10 @@
  All notable changes to this project will be documented in this file.
  The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+### [2.1.1] - 2020-06-10
+### Fixed
+- style adjustments for use with sticky buttons extension
+
 ### [2.1.0] - 2020-06-08
 ### Added
 - Support for sticky-pdp-buttons extension. See new `useWithStickyButtons` config.
