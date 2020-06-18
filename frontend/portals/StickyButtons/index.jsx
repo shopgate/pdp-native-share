@@ -8,7 +8,6 @@ const shareButton = css({
   minWidth: 44,
   height: 44,
   marginRight: 15,
-  marginBottom: 6,
 }).toString();
 
 const rippleButton = css({
