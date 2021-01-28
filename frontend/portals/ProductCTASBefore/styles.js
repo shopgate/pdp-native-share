@@ -1,4 +1,6 @@
 import { css } from 'glamor';
+import { iOSIconStyles } from '../../config';
+
 const iOSButtons = css({
   position: 'absolute',
   right: 62,
@@ -6,6 +8,6 @@ const iOSButtons = css({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
-}).toString();
+}, iOSIconStyles).toString();
 
 export default { iOSButtons };

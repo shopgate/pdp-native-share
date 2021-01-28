@@ -10,6 +10,7 @@ This extension will also add a Configuration field to the Connect merchant admin
 
 Set the following values in your Shopgate Connect Admin:
 * `iOSIcon` - (ios/gmd) Defaults to "ios". Set to "gmd" in order to use the GMD icon on the iOS theme.
+* `iOSIconStyles` - (json) Styles for iOs button component.
 * `gmdIcon` - (ios/gmd) Defaults to "gmd". Set to "ios" in order to use the iOS icon on the GMD theme.
 * `useWithStickyButtons` - (true/false) Defaults to "false". Set to "true" in order to make it compatible with sticky-pdp-buttons extension.
 
@@ -20,6 +21,10 @@ Set the following values in your Shopgate Connect Admin:
   "iOSIcon": "gmd",
   "gmdIcon": "ios",
   "useWithStickyButtons": false,
+  "iOSIconStyles": {
+    "right": "16px",
+    "top": "-80px"
+  }
 }
 ```
 

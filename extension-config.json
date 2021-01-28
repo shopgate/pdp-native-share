@@ -42,6 +42,15 @@
         "label": "iOS icon style"
       }
     },
+    "iOSIconStyles": {
+      "type": "admin",
+      "destination": "frontend",
+      "default": null,
+      "params": {
+        "type": "json",
+        "label": "iOS icon styles"
+      }
+    },
     "gmdIcon": {
       "type": "admin",
       "destination": "frontend",
